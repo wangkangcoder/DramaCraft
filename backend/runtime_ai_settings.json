@@ -1,0 +1,12 @@
+{
+  "model_base": "deepseek",
+  "zhipu_model": "glm-4-plus",
+  "openai_model": "gpt-4o",
+  "deepseek_model": "deepseek-v4-pro",
+  "temperature": 0.75,
+  "top_p": 0.9,
+  "safety_provider": "tencent",
+  "zhipu_api_key": "29a636d5b47c4ba78cbe1612e60d33cd.7DCz91mVvjYCCCYI",
+  "openai_api_key": "",
+  "deepseek_api_key": "sk-4411128acb85467990177c52f0c8ce9d"
+}

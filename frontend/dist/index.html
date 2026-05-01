@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI剧本协同创作系统</title>
+    <script>
+      (function () {
+        var isProjectPage = window.location.pathname.indexOf('/ai-screenplay-system/') !== -1
+        if (isProjectPage && !window.location.hash) {
+          window.location.replace(window.location.origin + '/ai-screenplay-system/#/login')
+          return
+        }
+
+        window.__APP_BOOT_FAILED__ = false
+        window.addEventListener('error', function () {
+          window.__APP_BOOT_FAILED__ = true
+        })
+
+        setTimeout(function () {
+          var app = document.getElementById('app')
+          if (!app) return
+          if (!app.children.length || window.__APP_BOOT_FAILED__) {
+            app.innerHTML = '<div style="padding:24px;font-family:PingFang SC,Microsoft YaHei,sans-serif;line-height:1.8;">页面初始化失败，请先清空浏览器缓存后重试。<br/>临时入口：<a href="/ai-screenplay-system/#/login">点击进入登录页</a></div>'
+          }
+        }, 4000)
+      })()
+    </script>
+    <script type="module" crossorigin src="/ai-screenplay-system/assets/index-b73bff7d.js"></script>
+    <link rel="stylesheet" href="/ai-screenplay-system/assets/index-77c5f322.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    
+  </body>
+</html>
+
+ 
